@@ -1,0 +1,729 @@
+    <!DOCTYPE html>
+  <html>
+    <head>
+      
+    <title>Domus Libera - Prenota Ora - Contatti</title>
+    <meta name="description" content="Contatta ora Domus Libera,  per prenotare o ricevere informazioni sulla nostra residenza nel centro storico, la tua casa romana.">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Domus Libera - Prenota Ora - Contatti">
+    <meta property="og:description" content="Contatta ora Domus Libera,  per prenotare o ricevere informazioni sulla nostra residenza nel centro storico, la tua casa romana.">
+    <meta property="og:url" content="https://www.domuslibera.com:443/it/privacy">
+    <meta property="og:site_name" content="Domus Libera">
+    <meta property="og:image" content="https://cdn.blastness.info/media/73/top/thumbs/medium/_DSC5123.jpg" >
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://www.domuslibera.com:443/it/privacy">
+    <meta name="twitter:creator" content="">
+   
+    <link rel="preconnect" href="https://cdn.blastness.info">
+    <link rel="dns-prefetch" href="https://cdn.blastness.info">
+            <style>
+        body{
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-smoothing: antialiased;
+        }
+    </style>
+    <link rel="alternate" href="../en/privacy.html" hreflang="en" />
+    <link rel="alternate" href="privacy.html" hreflang="it" />
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <meta name="format-detection" content="telephone=no">
+
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Domus Libera - Prenota Ora - Contatti</title>
+      <meta name="description" content="Contatta ora Domus Libera,  per prenotare o ricevere informazioni sulla nostra residenza nel centro storico, la tua casa romana."/>
+      <meta name="keywords" content=""/>
+
+
+      <link href="https://fonts.googleapis.com/css?family=Lora|Crimson+Text|Raleway|Work+Sans:400,700" rel="stylesheet">
+
+
+
+      <link rel="stylesheet" href="../templates/tetris/js/libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+      <link rel="stylesheet" href="../templates/tetris/js/libs/swipebox-master/src/css/swipebox.min.css">
+      <link rel="stylesheet" href="../templates/tetris/js/libs/Swiper-3.4.0/dist/css/swiper.min.css">
+      <link rel="stylesheet" href="../templates/tetris/css/style.css%3Fv=1.1.css">
+      <link rel="stylesheet" href="../templates/tetris/css/style-modify.css%3Fv=1.1.css">
+
+      <script type="text/javascript" src="../templates/tetris/js/libs/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+      <script type="text/javascript" src="../templates/tetris/js/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="../templates/tetris/js/libs/swipebox-master/src/js/jquery.swipebox.min.js"></script>
+      <script type="text/javascript" src="../templates/tetris/js/libs/Swiper-3.4.0/dist/js/swiper.jquery.min.js"></script>
+
+      <script type="text/javascript" src="../templates/tetris/js/libs/janpaepke-ScrollMagic-ae215ee/scrollmagic/minified/ScrollMagic.min.js"></script>
+      <script type="text/javascript" src="https://www.domuslibera.com/templates/tetris/js/isotope.pkgd.min.js"></script>
+      <script type="text/javascript" language="javascript" src="https://inclusioni.blastness.com/lingue_calendario/jquery.ui.datepicker-ita.js"></script>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+
+          $( window ).scroll(function() {
+
+            if($(window).scrollTop() >= 537){
+              $(".action_menu").addClass("sticky");
+            } else {
+              $(".action_menu").removeClass("sticky");
+            }
+
+          });
+
+
+          var gallery = new Swiper('.gallery', {
+              paginationClickable: true,
+              spaceBetween: 30,
+              loop: true,
+              autoplay: 3000,
+              	speed: 1000,
+              effect: 'fade',
+          		onInit: function(swiper){
+          			numero_slide = parseInt(swiper.slides.length)-2;
+          			if(numero_slide==1){
+          					swiper.stopAutoplay();
+          				}
+          		}
+          });
+
+          var offerte_slider = new Swiper('.offerte_slider', {
+              pagination: '.swiper-pagination',
+              slidesPerView: 2,
+              paginationClickable: true,
+              spaceBetween: 30,
+              nextButton: '.swiper-next',
+              prevButton: '.swiper-prev',
+              autoplay: 3000,
+          		speed: 1000,
+              loop: true,
+          		onInit: function(swiper){
+          			numero_slide = parseInt(swiper.slides.length)-2;
+          			if(numero_slide==1){
+          					swiper.stopAutoplay();
+          				}
+          		},
+              // Responsive breakpoints
+              breakpoints: {
+                1000: {
+                  slidesPerView: 1,
+                  spaceBetween: 30
+                }
+              }
+          });
+
+        /*scrolloff Gallery*/
+        $('#gmap').addClass('scrolloff');
+
+        $('#overlay').on("mouseup",function(){
+           $('#gmap').addClass('scrolloff');
+        });
+        $('#overlay').on("mousedown",function(){
+           $('#gmap').removeClass('scrolloff');
+        });
+
+        $("#gmap").mouseleave(function () {
+           $('#gmap').addClass('scrolloff');
+        });
+
+        $.datepicker.regional['ita'];
+
+          $( "#data_arrivo" ).datepicker({
+            dateFormat:"dd-mm-yy",
+            minDate: new Date(),
+            onSelect: function(dateText) {
+              var date = $("#data_arrivo").datepicker("getDate");
+
+              $(".qr li ul li:nth-child(1) .gg").html($.datepicker.formatDate("d", date));
+              $(".qr li ul li:nth-child(1) .mm").html($.datepicker.formatDate("M", date));
+
+              if($('#data_arrivo').datepicker('getDate') >= $('#data_partenza').datepicker('getDate')){
+
+                var nextDayDate = $('#data_arrivo').datepicker('getDate', '+1d');
+                nextDayDate.setDate(nextDayDate.getDate());
+
+                var nextDayDatep1 = $('#data_arrivo').datepicker('getDate', '+1d');
+                nextDayDatep1.setDate(nextDayDatep1.getDate() + 1);
+
+                $("#data_partenza").datepicker( "option", "minDate", nextDayDatep1);
+                $('#data_partenza').datepicker('setDate', nextDayDate);
+
+                var date_1 = $("#data_partenza").datepicker("getDate");
+                $(".qr li ul li:nth-child(2) .gg").html($.datepicker.formatDate("d", date_1));
+                $(".qr li ul li:nth-child(2) .mm").html($.datepicker.formatDate("M", date_1));
+
+              } else {
+
+                var nextDayDate = $('#data_arrivo').datepicker('getDate', '+1d');
+                nextDayDate.setDate(nextDayDate.getDate() + 1);
+                $("#data_partenza").datepicker( "option", "minDate", nextDayDate);
+
+              }
+
+
+              notti = calcola_notti();
+              $('#notti_1').val(notti);
+            }
+
+
+          }).datepicker( "setDate", "d" );
+
+
+
+          $( "#data_partenza" ).datepicker({
+            dateFormat:"dd-mm-yy",
+            minDate: new Date(),
+            onSelect: function(dateText) {
+              var date = $("#data_partenza").datepicker("getDate");
+              $(".qr li ul li:nth-child(2) .gg").html($.datepicker.formatDate("d", date));
+              $(".qr li ul li:nth-child(2) .mm").html($.datepicker.formatDate("M", date));
+
+              notti = calcola_notti();
+              $('#notti_1').val(notti);
+            }
+
+          }).datepicker( "setDate", "+1d" );
+
+
+          var date = $("#data_arrivo").datepicker("getDate");
+          var date_1 = $("#data_partenza").datepicker("getDate");
+          $(".qr li ul li:nth-child(1) .gg").html($.datepicker.formatDate("d", date));
+          $(".qr li ul li:nth-child(1) .mm").html($.datepicker.formatDate("M", date));
+          $(".qr li ul li:nth-child(2) .gg").html($.datepicker.formatDate("d", date_1));
+          $(".qr li ul li:nth-child(2) .mm").html($.datepicker.formatDate("M", date_1));
+
+
+          $("#gg").val($.datepicker.formatDate("dd", date));
+          $("#mm").val($.datepicker.formatDate("mm", date));
+          $("#aa").val($.datepicker.formatDate("yy", date));
+
+
+
+          $(".freccia_in_basso").click(function() {
+           $('html, body').animate({
+            scrollTop: ($(".scroll_to_top").offset().top)
+          }, 1500);
+          })
+
+
+          var elementi_da_animare = new Array(".box1_content", ".box_content_inner", ".offerte li", ".menu_secondario li");
+          var contatore_scroll_magic = 0;
+
+          var controller = new ScrollMagic.Controller();
+
+          for (var i = 0; i < elementi_da_animare.length; i++) {
+
+             if($(elementi_da_animare[i]).length>1){
+
+               $(elementi_da_animare[i]).each(function() {
+
+               $(this).addClass("ScrollMagicElement"+contatore_scroll_magic);
+               var scene = new ScrollMagic.Scene({
+                triggerElement:".ScrollMagicElement"+contatore_scroll_magic,
+                reverse: false
+               })
+               .setClassToggle(".ScrollMagicElement"+contatore_scroll_magic, 'opacity')
+               .addTo(controller);
+               contatore_scroll_magic++;
+               });
+
+             } else {
+
+              var scene = new ScrollMagic.Scene({
+               triggerElement:elementi_da_animare[i],
+               reverse: false
+              })
+              .setClassToggle(elementi_da_animare[i], 'opacity')
+              .addTo(controller);
+
+            }
+
+          }
+
+
+          $('#hamburger_menu').click(function(){
+
+      	  	$(this).toggleClass("open");
+      		  if ($("body").hasClass("apri_menu_mobile")) {
+      				$("body").removeClass("apri_menu_mobile").addClass("chiudi_menu_mobile");
+      		  } else {
+      				$("body").addClass("apri_menu_mobile").removeClass("chiudi_menu_mobile");
+      		  }
+
+          });
+
+
+          $( window ).resize(function() {
+            if($("#check_zindex").css("z-index") != "750"){
+                $("body").removeClass("apri_menu_mobile").removeClass("chiudi_menu_mobile");
+            }
+          });
+
+          $(".swipebox").swipebox();
+
+
+
+          var gallery = "";
+      		$('.gallery_minigallery li').each(function(){
+      			gallery += "<li class='"+$(this).attr("class")+"'>";
+      			gallery += $(this).html();
+      			gallery += "</li>";
+      		});
+
+      		casual = Math.floor((Math.random() * 100) + 1);
+      		$('.swipebox').addClass("img"+casual);
+      		$(".img"+casual).swipebox();
+
+      		$( ".filter" ).click(function() {
+      		  $(".filter").removeClass("active");
+      		  $(this).addClass("active");
+      		  var class_ = $(this).attr("data-filter");
+      		  casual = Math.floor((Math.random() * 100) + 1);
+      			  if(class_ == "all"){
+      				  $('.gallery_minigallery li').remove();
+      				  $(".gallery_minigallery").append(gallery);
+      			  } else {
+      				  $('.gallery_minigallery li').remove();
+      				  $(".gallery_minigallery").append(gallery);
+      				  $(".gallery_minigallery li").not("."+class_).remove();
+      			  }
+      			  $('.swipebox').addClass("img"+casual);
+      			  $(".img"+casual).swipebox();
+      			}
+      		);
+
+
+
+
+
+
+        });
+
+
+        function calcola_notti(){
+
+          var alternate_data_inizio = $('#data_arrivo').val();
+      		var alternate_data_fine = $('#data_partenza').val();
+
+      		alternate_data_inizio = alternate_data_inizio.split('-');
+      		var anno_i = alternate_data_inizio[2];
+      		var mese_i = alternate_data_inizio[1];
+      		var giorno_i = alternate_data_inizio[0];
+
+      		alternate_data_fine = alternate_data_fine.split('-');
+      		var anno_p = alternate_data_fine[2];
+      		var mese_p = alternate_data_fine[1];
+      		var giorno_p = alternate_data_fine[0];
+
+      		fromdate = new Date( anno_i, mese_i-1, giorno_i);
+      		todate = new Date( anno_p, mese_p-1, giorno_p);
+      		var giorni_differenza = (todate-fromdate)/86400000;
+      		giorni_differenza = Math.round(giorni_differenza);
+
+
+          var date = $("#data_arrivo").datepicker("getDate");
+          $("#gg").val($.datepicker.formatDate("dd", date));
+          $("#mm").val($.datepicker.formatDate("mm", date));
+          $("#aa").val($.datepicker.formatDate("yy", date));
+
+          return giorni_differenza;
+
+        }
+
+      </script>
+
+    </head>
+    <body>
+    <div id="check_zindex"></div>
+
+<div id="hamburger_menu">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- ELEMENTO QR -->
+<form id="form_qr" action="https://www.blastnessbooking.com/reservation_hotel.htm" method="get">
+
+<input type="hidden" id="lingua_int" name="lingua_int" value="ita" />
+<input type="hidden" id="id_stile" name="id_stile" value="12464" />
+<input type="hidden" id="id_albergo" name="id_albergo" value="13287" />
+<input type="hidden" id="dc" name="dc" value="7000" />
+
+<input type="hidden" id="tot_camere" name="tot_camere" value="1" />
+<input type="hidden" id="tot_adulti" name="tot_adulti" value="2" />
+<input type="hidden" id="tot_bambini" name="tot_bambini" value="0" />
+
+<input type="hidden" id="notti_1" name="notti_1" value="1" />
+<input type="hidden" id="gg" name="gg" value="" />
+<input type="hidden" id="mm" name="mm" value="" />
+<input type="hidden" id="aa" name="aa" value="" />
+
+<ul class="qr clearfix">
+  <li>Prenota subito</li>
+  <li>
+    <ul class="clearfix"><li>
+        <input type="text" id="data_arrivo" />
+        <div class="label">IN</div>
+        <div class="gg"></div>
+        <div class="mm"></div>
+      </li><li>
+        <input type="text" id="data_partenza" />
+        <div class="label">OUT</div>
+        <div class="gg"></div>
+        <div class="mm"></div>
+      </li></ul>
+  </li>
+  <li>
+    <input type="submit" value="Prenota"/>
+  </li>
+  <li>
+    <a href="https://www.blastnessbooking.com/reservation_cancel_modify.htm?lingua_int=ita&id_albergo=13287&dc=7000&id_stile=12464">Modifica/Cancella prenotazione</a>
+  </li>
+</ul>
+</form>
+
+<nav class="menu_principale"><ul><li ><a href="casa-vacanze-lusso-roma.html">Hotel</a></li><li ><a href="camere-lusso-roma.html">Camere</a><ul><li ><a href="camere-lusso-roma/classic-room.html">Camera Classic</a></li><li ><a href="camere-lusso-roma/superior-room.html">Camera Superior</a></li><li ><a href="camere-lusso-roma/superior-room-with-balcony.html">Camera Superior con balcone</a></li></ul></li><li ><a href="concierge-roma.html">Concierge</a></li><li ><a href="posizione-centrale-hotel-roma.html">Posizione</a></li><li ><a href="gallery-guest-house-roma.html">Gallery</a></li><li ><a href="offerte-vacanze-roma.html">Offerte</a></li><li ><a href="https://www.blastnessbooking.com/reservation_hotel.htm?lingua_int=ita&id_albergo=13287&dc=7000&id_stile=12464&notti_1=1&tot_camere=1&tot_adulti=2&tot_bambini=0&gg=31&mm=10&aa=2022">Prenota ora</a></li></ul></nav>
+<ul class="action_menu">
+  <li><a href="tel:+39 0689012699"><i class="fa fa-phone" aria-hidden="true"></i><span>Chiama</span></a></li>
+  <li><a href="https://www.blastnessbooking.com/reservation_hotel.htm?lingua_int=ita&id_albergo=13287&dc=7000&id_stile=12464&notti_1=1&tot_camere=1&tot_adulti=2&tot_bambini=0&gg=31&mm=10&aa=2022"><i class="fa fa-calendar" aria-hidden="true"></i><span>Prenota</span></a></li>
+  <li><a href="mailto:infodomuslibera@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>mail</span></a></li>
+</ul>
+
+
+<header>
+
+  <nav class="menu_lingue"><ul><li ><a href="../en/privacy.html">en</a></li><li class="active"><a href="privacy.html">it</a></li></ul></nav>
+  <a href="index.html" class="logo"><!--<img src="/templates/tetris/images/logo.png" alt="">-->
+    <object width="auto" height="100%" type="image/svg+xml" data="../templates/tetris/images/logo.svg">
+    Your browser does not support SVG
+  </object>
+  </a>
+
+</header>
+
+
+<section>
+
+                    <div class="gallery swiper-container">
+              <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                        <div class="img" style="background-image:url(https://cdn.blastness.info/media/73/top/thumbs/full/_DSC5123.jpg);">
+
+                          
+                        </div>
+                    </div>
+                                      <div class="swiper-slide">
+                        <div class="img" style="background-image:url(https://cdn.blastness.info/media/73/top/thumbs/full/_DSC5266.jpg);">
+
+                          
+                        </div>
+                    </div>
+                                      <div class="swiper-slide">
+                        <div class="img" style="background-image:url(https://cdn.blastness.info/media/73/top/thumbs/full/_DSC5165.jpg);">
+
+                          
+                        </div>
+                    </div>
+                                </div>
+              <div class="freccia_in_basso"></div>
+          </div>
+          
+
+
+
+
+
+
+
+
+        
+        <div class="box1 scroll_to_top   ">
+
+            
+            <div class="box1_content ">
+
+              <div class="box1_content_inner  box1_content_inner_w100">
+                <h1>Privacy</h1>
+
+                                  <div class="content"><p><strong><span style="color: #800080;">CENTRO PER LA PRIVACY</span></strong></p>
+<p><strong><span style="color: #800080;">INFORMATIVA GLOBALE SULLA PRIVACY</span></strong></p>
+<p><span style="color: #800080;"><strong>&nbsp;</strong></span><strong><br /> </strong><strong>Ultimo aggiornamento: 24 maggio 2018</strong></p>
+<p><strong>Domus Libera srl</strong> e le sue societ&agrave; affiliate, vi considera nostri ospiti e riconosce l'importanza della vostra privacy. Desideriamo rendervi noto il modo in cui raccogliamo, utilizziamo e divulghiamo i vostri dati personali.</p>
+<p>La presente Informativa sulla privacy descrive le procedure in materia di privacy adottate da <strong>Domus Libera srl</strong> per la raccolta dei dati tramite:</p>
+<p>&nbsp;</p>
+<ul>
+<li>il sito web <strong><a href="../index.html">domuslibera.com</a></strong>, attraverso i quali &egrave; possibile accedere alla presente Informativa sulla privacy;</li>
+<li>le applicazioni software da noi fornite da utilizzare su PC e dispositivi mobili (le "App");</li>
+<li>le pagine social da noi controllate, attraverso le quali &egrave; possibile accedere alla presente Informativa sulla privacy (collettivamente denominate le nostre "Pagine social");</li>
+<li>i messaggi e-mail in formato HTML da noi inviati contenenti il link alla presente Informativa sulla privacy e quelli da noi ricevuti;</li>
+<li>la vostra visita o permanenza presso la nostra struttura o altro tipo di interazione offline.</li>
+</ul>
+<p>Collettivamente, si fa riferimento al sito web e alle nostre Pagine social con la denominazione "Servizi online" e "Servizi" se si includono i canali offline. L'utilizzo dei suddetti Servizi comporta l'accettazione, da parte vostra, dei termini e delle condizioni previste dalla presente Informativa sulla privacy.</p>
+<ul>
+<li><strong>Raccolta Dati personali</strong></li>
+<li><strong>Modalit&agrave; di raccolta dei Dati personali</strong></li>
+<li><strong>Raccolta di Altri dati</strong></li>
+<li><strong>Modalit&agrave; di raccolta degli Altri dati</strong></li>
+<li><strong>Utilizzo dei Dati personali e degli Altri dati</strong></li>
+<li><strong>Divulgazione dei Dati personali e degli Altri dati</strong></li>
+<li><strong>Altri usi e divulgazioni</strong></li>
+<li><strong>Entit&agrave; non appartenenti a Domus Libera srl</strong></li>
+<li><strong>Pubblicit&agrave; di terze parti</strong></li>
+<li><strong>Sicurezza</strong></li>
+<li><strong>Preferenze, accesso e memorizzazione</strong></li>
+<li><strong>Come consultare, modificare o eliminare i Dati personali</strong></li>
+<li><strong>Conservazione</strong></li>
+<li><strong>Dati sensibili</strong></li>
+<li><strong>Uso dei Servizi da parte di minori</strong></li>
+<li><strong>Aggiornamenti della presente Informativa sulla privacy</strong></li>
+<li><strong>Come contattarci</strong></li>
+<li><strong>Altre informazioni</strong></li>
+<li><strong>Preferenze di privacy</strong></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>RACCOLTA DATI PERSONALI</strong></span></p>
+<p>Per "Dati personali" si intendono le informazioni che vi identificano personalmente o che consentono di identificare una persona.</p>
+<p>A ogni punto di contatto lungo il vostro viaggio raccogliamo i vostri Dati personali secondo le modalit&agrave; previste dalla legge, quali ad esempio:</p>
+<ul>
+<li>Nome</li>
+<li>Sesso</li>
+<li>Indirizzo postale</li>
+<li>Numero di telefono</li>
+<li>Indirizzo e-mail</li>
+<li>Numero di carta di credito/debito o altri dati relativi al pagamento</li>
+<li>Informazioni finanziarie in determinate circostanze</li>
+<li>Preferenza di lingua</li>
+<li>Data e luogo di nascita</li>
+<li>Nazionalit&agrave;, passaporto, visti o altri dati identificativi rilasciati dal governo</li>
+<li>Informazioni importanti quali compleanni, anniversari e occasioni speciali</li>
+<li>Dati del datore di lavoro</li>
+<li>Informazioni riguardanti l'Itinerario di viaggio, il gruppo turistico o le attivit&agrave;</li>
+<li>Precedenti soggiorni o interazioni con gli ospiti, beni e servizi acquistati, servizi speciali e richieste di servizi</li>
+<li>Informazioni di geolocalizzazione</li>
+<li>ID dell'account sui social media, foto del profilo e altre informazioni pubbliche o disponibili sui vostri social media</li>
+</ul>
+<p>In circostanze pi&ugrave; limitate potremmo anche raccogliere:</p>
+<ul>
+<li>Dati riguardanti familiari e partner, quali nomi ed et&agrave; dei figli</li>
+<li>Dati biometrici, quali immagini digitali</li>
+<li>Immagini, video e audio tramite videocamere di sorveglianza situate nelle aree pubbliche della nostra struttura, quali ingressi e corridoi;</li>
+<li>Preferenze e dati personalizzati ("Preferenze personali"), quali interessi, attivit&agrave;, hobby, preferenze di cibo e bevande, servizi e comfort da voi richiesti o di cui siamo venuti a conoscenza durante la vostra visita</li>
+</ul>
+<p>Fornendo a noi o ai nostri fornitori di servizi i Dati personali riguardanti altre persone (ad esempio se effettuate una prenotazione a nome di un'altra persona), dichiarate di essere autorizzati a farlo e ci autorizzate a utilizzare tali informazioni ai sensi della presente Informativa sulla privacy.</p>
+<p><span style="color: #800080;"><strong>MODALIT&Agrave; DI RACCOLTA DEI DATI PERSONALI</strong></span></p>
+<p>Raccogliamo i dati personali in modi diversi.</p>
+<ul>
+<li><strong>Servizi Online</strong>Raccogliamo i Dati personali quando effettuate una prenotazione, quando acquistate beni e servizi dal nostro Sito web, quando ci inviate messaggi, quando vi mettete in contatto con noi, quando pubblicate post sui social media, quando vi iscrivete a una newsletter oppure partecipate a sondaggi, concorsi o offerte promozionali.</li>
+<li><strong>Visite alla struttura e interazioni offline</strong>Raccogliamo i Dati personali quando visitate la nostra struttura o utilizzate la nostra Concierge per prenotare servizi di terze parti, quali ristoranti, centri benessere, visite e tour, servizi di assistenza all'infanzia e spa. Raccogliamo i Dati personali anche quando partecipate o partecipiamo agli eventi promozionali ospitati dalla nostra struttura oppure quando fornite i vostri Dati personali per promuovere un evento.</li>
+<li><strong>Centri di assistenza alla clientela</strong>Raccogliamo i Dati personali quando effettuate una prenotazione telefonica, quando ci inviate un'e-mail o un fax. Queste comunicazioni potrebbero essere registrate al fine di garantire la qualit&agrave; e la formazione del personale.</li>
+<li><strong>Business partner strategici</strong>Raccogliamo i Dati personali dalle societ&agrave; con le quali collaboriamo per fornirvi beni, servizi e offerte basate sulle vostre esperienze presso la nostra struttura o che riteniamo possano essere di vostro interesse ("Business partner strategici"). Tra i Business partner strategici rientrano i partner di viaggio, i fornitori di autonoleggio e le piattaforme di prenotazione. I Business partner strategici sono indipendenti da<strong> Domus Libera srl</strong>.</li>
+<li><strong>Altre fonti</strong>Raccogliamo i Dati personali da altre fonti, quali database pubblici, partner di marketing congiunto e altre terze parti.</li>
+<li><strong>Dispositivi connessi a Internet</strong>Raccogliamo i Dati personali da dispositivi connessi a Internet disponibili nella nostra struttura.</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>RACCOLTA DI ALTRI DATI</strong></span></p>
+<p>Per "Altri dati" si intendono le informazioni che non rivelano la vostra identit&agrave; o che non si riferiscono direttamente a una persona. Se gli Altri dati dovessero rivelare la vostra identit&agrave; o riferirsi a una persona, tratteremo tali informazioni come Dati personali. Gli Altri dati includono:</p>
+<ul>
+<li>dati presenti sul browser e sul dispositivo</li>
+<li>dati raccolti tramite cookie, pixel tag e altre tecnologie</li>
+<li>dati demografici e altri dati da voi forniti</li>
+<li>dati aggregati</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>MODALIT&Agrave; DI RACCOLTA DEGLI ALTRI DATI</strong></span></p>
+<p>Raccogliamo gli Altri dati in modi diversi.</p>
+<ul>
+<li><strong>Browser o dispositivo&nbsp;</strong>Tramite il vostro browser oppure automaticamente tramite il vostro dispositivo, raccogliamo determinate informazioni, quali ad esempio il vostro indirizzo Media Access Control (MAC), il tipo di computer (Windows o Mac), la risoluzione dello schermo, il nome e la versione del sistema operativo, il produttore e il modello del dispositivo, la lingua, il tipo e la versione del browser Internet, il nome e la versione dei Servizi online che utilizzate (ad esempio le App). Utilizziamo queste informazioni per garantire il corretto funzionamento dei Servizi online.</li>
+<li><strong>Cookie</strong></li>
+</ul>
+<p>Determinate informazioni sono raccolte dai cookie, che sono pezzi di informazioni che vengono memorizzati direttamente sul computer che state utilizzando. I cookie ci consentono di raccogliere informazioni quali il tipo di browser utilizzato, il tempo trascorso sui Servizi online, le pagine visitate, l'URL di provenienza, le preferenze di lingua e altri dati aggregati sul traffico. Utilizziamo le informazioni per fini di sicurezza, per facilitare la navigazione, per mostrare le informazioni in modo pi&ugrave; efficace, per raccogliere dati statistici, per personalizzare la vostra esperienza d'uso dei Servizi online e per riconoscere il vostro computer e fornirvi assistenza durante l'utilizzo dei Servizi online. Raccogliamo inoltre dati statistici sull'uso dei Servizi online al fine di migliorarne continuamente la progettazione e le funzionalit&agrave;, nonch&eacute; per comprendere come essi siano utilizzati e per risolvere i problemi.</p>
+<p>I cookie ci consentono, inoltre, di selezionare quali delle nostre pubblicit&agrave; od offerte possano interessarvi maggiormente, mostrandovele mentre state utilizzando i Servizi online, oppure di inviare e-mail di marketing. Utilizziamo i cookie anche per monitorare le risposte alle nostre pubblicit&agrave; online e alle nostre e-mail di marketing.</p>
+<p>Se non volete che i vostri dati vengano raccolti tramite i cookie, scoprite come impostarli su&nbsp;<span style="color: #800080;"><a href="http://www.allaboutcookies.org/manage-cookes/index.htm" style="color: #800080;"><strong>http://www.allaboutcookies.org/manage-cookes/index.htm.</strong></a></span></p>
+<p>Potete scegliere se accettare i cookie modificando le impostazioni del browser oppure le preferenze di tracciamento cliccando su "Preferenze di tracking" in fondo alla nostra Homepage. Tuttavia, qualora non accettiate i cookie, potreste avere qualche difficolt&agrave; durante l'utilizzo dei Servizi online. Per esempio, potremmo non essere in grado di riconoscere il vostro computer. Inoltre, potreste non ricevere annunci pubblicitari o altre offerte da parte nostra che potrebbero interessarvi o esservi utili. Attualmente non rispondiamo ai segnali "Do Not Track" dei browser.</p>
+<ul>
+<li><strong>Pixel tag e altre tecnologie simili</strong>I dati vengono raccolti dai pixel tag (noti anche come "web beacon" e "clear GIF") che vengono utilizzati in relazione ad alcuni Servizi online a vari scopi, tra cui il tracciamento delle azioni degli utenti dei Servizi online (inclusi i destinatari delle e-mail), la valutazione del successo delle nostre campagne di marketing e la redazione di statistiche sull'utilizzo dei Servizi online.</li>
+<li><strong>Analitica</strong>Raccogliamo le informazioni tramite Google Analytics e Adobe Analytics, che utilizzano i cookie e altre tecnologie per raccogliere e analizzare i dati sull'utilizzo dei Servizi. I servizi raccolgono i dati relativi all'utilizzo di altri siti web, App e risorse online. Per saperne di pi&ugrave; sulle procedure adottate da Google accedete a&nbsp;<span style="color: #800080;"><a href="http://www.google.com/policies/privacy/partners/" style="color: #800080;"><strong>google.com/policies/privacy/partners/</strong></a></span>&nbsp;e disattivate la funzione scaricando il componente aggiuntivo del browser per la disattivazione di Google Analytics disponibile su&nbsp;<span style="color: #800080;"><a href="https://tools.google.com/dlpage/gaoptout" style="color: #800080;"><strong>https://tools.google.com/dlpage/gaoptout.</strong></a></span>&nbsp;Per saperne di pi&ugrave; su Adobe e la disattivazione, visitate il sito&nbsp;<a href="http://www.adobe.com/privacy/opt-out.html"><strong><span style="color: #800080;">http://www.adobe.com/privacy/opt-out.html.</span></strong></a></li>
+<li><strong>Tecnologia Adobe Flash (ad es. Flash Local Shared Objects (&ldquo;Flash LSO&rdquo;)) e altre tecnologie simili</strong>Raccogliamo informazioni tramite i Flash LSO e altre tecnologie su alcuni siti web per vari scopi, tra cui la raccolta e l'archiviazione di dati riguardanti il vostro utilizzo dei Servizi online. Se non volete che i Flash LSO vengano archiviati sul vostro computer, potete modificare la impostazioni di Flash Player per impedire l'archiviazione dei Flash LSO utilizzando gli strumenti disponibili in<span style="color: #800080;">&nbsp;<a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html" style="color: #800080;"><strong>Website Storage Settings Panel</strong></a></span>&nbsp;su http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html. Potete inoltre controllare i Flash LSO accedendo&nbsp;<span style="color: #800080;"><a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html" style="color: #800080;"><strong>Global Storage Settings Panel</strong></a></span>&nbsp;su&nbsp;<span style="color: #800080;"><a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html" style="color: #800080;"><strong>http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html</strong></a>&nbsp;</span>e seguendo le istruzioni (sono incluse le istruzioni che spiegano, per esempio, come cancellare i Flash LSO esistenti (chiamati &ldquo;informazioni&rdquo; sul sito Macromedia), come impedire il caricamento di Flash LSO sul vostro computer senza la vostra autorizzazione e (per Flash Player 8 e versioni successive) come bloccare i Flash LSO che non sono inviati dall'operatore della pagina su cui vi trovate in quel momento). Si tenga presente che impostando Flash Player affinch&eacute; riduca o limiti l'accettazione dei Flash LSO &egrave; possibile che si riducano o blocchino le funzionalit&agrave; di alcune applicazioni Flash, tra cui quelle utilizzate in relazione ai Servizi online. Per maggiori informazioni si rimanda a&nbsp;<span style="color: #800080;"><a href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html" style="color: #800080;"><strong>https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html.</strong></a></span></li>
+<li><strong>Indirizzo IP</strong>L'indirizzo IP &egrave; un numero assegnato automaticamente dal vostro Internet Service Provider (ISP) al computer che utilizzate. L'indirizzo IP viene identificato e collegato automaticamente nei log file del nostro server ogni volta che un utente accede ai Servizi online, insieme alle informazioni riguardanti l'ora della visita e le pagine visitate. Utilizziamo gli indirizzi IP per calcolare i livelli di utilizzo, analizzare i problemi del server e gestire i Servizi online. Potremmo inoltre utilizzare il vostro indirizzo IP per risalire alla vostra posizione approssimativa.</li>
+<li><strong>Dati aggregati&nbsp;</strong>Potremmo aggregare i dati raccolti che non identificano n&eacute; voi, n&eacute; altri utenti.</li>
+</ul>
+<p><span style="color: #800080;"><strong>UTILIZZO DEI DATI PERSONALI E DEGLI ALTRI DATI</strong></span></p>
+<p>Utilizziamo i Dati personali e gli Altri dati per fornirvi Servizi, sviluppare nuove offerte e tutelare <strong>Domus Libera srl</strong> e i nostri ospiti come indicato a seguire. In alcuni casi vi chiederemo di fornire i vostri Dati personali e Altri dati direttamente a noi. Se non fornite i dati richiesti o ci vietate di raccogliere tali informazioni, potremmo non essere in grado di fornire i Servizi richiesti.</p>
+<p>Utilizziamo i Dati personali e gli Altri dati per i nostri legittimi interessi economici, incluso quanto segue.</p>
+<ul>
+<li><strong>Fornitura dei Servizi richiesti</strong>Utilizziamo i Dati personali e gli Altri dati per fornirvi i Servizi richiesti, nonch&eacute;:
+<ul>
+<li>per facilitare le prenotazioni, effettuare pagamenti, inviare messaggi di carattere amministrativo, inviare messaggi di conferma o prima dell'arrivo, assistervi in occasione di riunioni ed eventi e per fornirvi altre informazioni riguardo alla zona e alla struttura presso cui soggiornerete;</li>
+<li>per completare la vostra prenotazione e il vostro soggiorno, ad esempio per elaborare il pagamento, garantire che la vostra camera sia disponibile e per fornirvi la relativa assistenza;</li>
+<li>per supportare il nostro programma di ricevute elettroniche. Quando utilizzate un indirizzo e-mail per effettuare una prenotazione, noi utilizziamo tale indirizzo per inviarvi una copia della vostra fattura. Se effettuate una prenotazione per un'altra persona utilizzando il vostro indirizzo e-mail, la fattura di quella persona verr&agrave; inviata sempre al vostro indirizzo. Potete annullare l'invio della fattura tramite e-mail e ricevere invece una copia cartacea contattando il front desk.</li>
+</ul>
+</li>
+</ul>
+<p>Utilizzeremo i Dati personali e gli Altri dati per gestire il rapporto contrattuale instaurato con voi, poich&eacute; &egrave; nel nostro interesse e/o per ottemperare agli obblighi di legge.</p>
+<ul>
+<li><strong>Personalizzazione dei Servizi in base alle vostre Preferenze personali</strong>Utilizziamo i Dati personali e gli Altri dati per personalizzare i Servizi e migliorare le vostre esperienze, anche quando contattate il nostro front desk, visitate una la nostra struttura o utilizzate i Servizi online, al fine di:
+<ul>
+<li>personalizzare la vostra esperienza in base alle vostre Preferenze personali;</li>
+<li>sottoporre offerte in base alle vostre Preferenze personali.</li>
+</ul>
+</li>
+</ul>
+<p>Utilizzeremo i Dati personali e gli Altri dati per fornire Servizi personalizzati in base alle vostre Preferenze personali, sia con il vostro consenso sia perch&eacute; &egrave; nel nostro interesse farlo.</p>
+<ul>
+<li><strong>Comunicazione su beni e servizi in base alle Preferenze personali</strong>Utilizziamo i Dati personali e gli Altri dati per:
+<ul>
+<li>inviarvi comunicazioni di marketing, offerte promozionali, ricerche di mercato e sondaggi periodici sulla soddisfazione del cliente o sulla qualit&agrave;</li>
+</ul>
+</li>
+</ul>
+<p>Utilizzeremo i Dati personali e gli Altri dati per comunicare con voi con il vostro consenso, per gestire il rapporto contrattuale instaurato con voi e/o perch&eacute; &egrave; nel nostro interesse farlo.</p>
+<ul>
+<li><strong>Lotterie, iniziative, eventi e promozioni</strong>Utilizziamo i Dati personali e gli Altri dati per consentirvi di partecipare a lotterie, concorsi e altre promozioni e per gestire tali attivit&agrave;. Alcune di queste attivit&agrave; prevedono ulteriori regolamenti che potrebbero contenere informazioni aggiuntive sul modo in cui utilizziamo e divulghiamo i vostri Dati personali. Vi consigliamo di leggere attentamente tali regolamenti.<br /> <br /> Utilizziamo i Dati personali e gli Altri dati con queste modalit&agrave; e con il vostro consenso per gestire il rapporto contrattuale instaurato con voi e/o perch&eacute; &egrave; nel nostro interesse farlo.</li>
+<li><strong>Scopi commerciali</strong>Utilizziamo i Dati personali e gli Altri dati per le seguenti attivit&agrave;: analisi dei dati, auditing, monitoraggio della sicurezza, prevenzione delle frodi (incluso l'uso di televisioni a circuito chiuso, chiavi elettroniche e altri sistemi di sicurezza), sviluppo di nuovi beni e servizi, miglioramento o modifica dei nostri servizi, identificazione delle tendenze di utilizzo, valutazione dell'efficacia delle nostre campagne promozionali, gestione ed espansione delle nostre attivit&agrave; commerciali.</li>
+</ul>
+<p>Utilizziamo i Dati personali e gli Altri dati con queste modalit&agrave; e il vostro consenso per gestire il rapporto contrattuale instaurato con voi, per ottemperare agli obblighi di legge o perch&eacute; &egrave; nel nostro interesse farlo.</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>DIVULGAZIONE DEI DATI PERSONALI E DEGLI ALTRI DATI</strong></span></p>
+<p>Il nostro obiettivo &egrave; offrirvi ospitalit&agrave; e servizi ai massimi livelli e nel farlo condividiamo i Dati personali e gli Altri dati con i soggetti indicati in seguito.</p>
+<ul>
+<li><strong>Domus Libera srl&nbsp;</strong>Divulghiamo i Dati personali e gli Altri dati ad altre societ&agrave;&nbsp;per le finalit&agrave; indicate nella presente Informativa sulla privacy, ovvero per erogare e personalizzare i servizi, comunicare con voi, promuovere i nostri servizi e raggiungere i nostri obiettivi aziendali. <strong>Domus Libera srl</strong> &egrave; responsabile dell'utilizzo congiunto dei Dati personali. Condividiamo i vostri Dati personali e gli Altri dati utilizzati per effettuare una prenotazione presso la struttura interessata al fine di concludere la prenotazione</li>
+<li><strong>Business partner strategici&nbsp;</strong>Divulghiamo i Dati personali e gli Altri dati a Business partner strategici selezionati che forniscono beni, servizi e offerte in grado di valorizzare la vostra esperienza presso le nostre strutture o che riteniamo possano essere di vostro interesse. Condividendo i dati con questi Business partner strategici siamo in grado di erogare e rendere disponibili per voi servizi personalizzati ed esperienze di viaggio uniche. Per esempio, la condivisione consente a spa, ristoranti, centri benessere e concierge terzi di offrirvi dei servizi. La condivisione ci consente di fornirvi un'unica fonte per l'acquisto di pacchetti che includono servizi di viaggio, quali biglietti aerei, autonoleggi o pacchetti vacanza.</li>
+<li><strong>Fornitori di servizi&nbsp;</strong>Divulghiamo i Dati personali e gli Altri dati ai fornitori di servizi terzi per le finalit&agrave; indicate nella presente Informativa sulla privacy. Tra i fornitori di servizi rientrano le societ&agrave; che forniscono servizi di web hosting, analisi di dati, elaborazione dei pagamenti, evasione ordini, IT e fornitura di infrastrutture correlate, servizio clienti, invio e-mail, marketing, auditing e altri servizi.</li>
+<li><strong>Account collegati e attivit&agrave; promozionali&nbsp;</strong>Collaboriamo con terze parti selezionate che vi consentono di aderire ai loro servizi o di partecipare alle loro promozioni. Tra queste societ&agrave; vi sono le compagnie aeree e i fornitori di autonoleggio. Solo dopo che avrete aderito ai servizi divulgheremo i vostri Dati personali e gli Altri dati a terzi.</li>
+<li><strong>Riorganizzazione aziendale&nbsp;</strong>Potremmo divulgare o inoltrare a terzi i vostri Dati personali in caso di riorganizzazione, fusione, vendita, joint venture, assegnazione, trasferimento o altra cessione, totale o parziale delle attivit&agrave;, risorse o giacenze del <strong>Domus Libera srl</strong> (inclusi bancarotta o eventi simili).</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>ALTRI USI E DIVULGAZIONI</strong></span></p>
+<p>Utilizzeremo e divulgheremo i Dati personali quando lo riterremo necessario od opportuno: (a) per ottemperare alla legislazione vigente, incluse le leggi al di fuori del vostro Paese di residenza; (b) per conformarci all'iter giudiziario; (c) per rispondere a richieste da parte delle autorit&agrave; pubbliche e governative, incluse le autorit&agrave; al di fuori del vostro Paese di residenza, e per soddisfare i requisiti di sicurezza e garantire l'applicazione della legge; (d) per applicare i nostri Termini e condizioni; (e) per proteggere le nostre attivit&agrave;; (f) per proteggere i diritti, la privacy, la sicurezza; (g) per consentirci di procedere legalmente oppure di limitare i danni eventualmente subiti.</p>
+<p>Potremmo utilizzare e divulgare gli Altri dati per qualsiasi scopo, fatta eccezione per i casi non consentiti dalla legge applicabile. In alcuni casi potremmo associare gli Altri dati ai Dati personali (ad esempio il vostro nome alla vostra localit&agrave;). Nel farlo, tratteremo tali informazioni come Dati personali fino a quando saranno associati.</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>ENTIT&Agrave; NON APPARTENENTI A DOMUS LIBERA SRL</strong></span></p>
+<p>La presente Informativa sulla privacy non &egrave; destinata, e non ci assumiamo alcuna responsabilit&agrave; in merito alla privacy, ai dati o alle procedure di entit&agrave; non appartenenti a <strong>Domus Libera srl</strong>, inclusi i business partner strategici o terzi che gestiscono siti o servizi collegati con i Servizi, servizi di pagamento o siti web che rimandano alla page di destinazione di fornitori dei servizi Internet ad alta velocit&agrave; presso la nostra struttura. L'aggiunta di un collegamento ai Servizi online non implica l'approvazione, da parte nostra, del sito o del servizio collegati. Non abbiamo alcun controllo e non ci assumiamo alcuna responsabilit&agrave; in merito alla raccolta, all'utilizzo e alla divulgazione dei vostri Dati personali da parte di terzi.</p>
+<p>Non ci assumiamo inoltre alcuna responsabilit&agrave; in merito alla raccolta, all'utilizzo, alla divulgazione e alle politiche e procedure di sicurezza dei dati di altre aziende quali Facebook, Apple, Google, Microsoft, RIM o qualsiasi altro sviluppatore di applicazioni, fornitore di applicazioni, fornitore di piattaforme di social media, fornitore di sistemi operativi, fornitore di servizi o dispositivi wireless, anche in relazione ai Dati personali da voi forniti ad altre aziende le nostre Pagine sui social media.</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>PUBBLICIT&Agrave; DI TERZE PARTI</strong></span></p>
+<p>Potremmo ricorrere a societ&agrave; pubblicitarie esterne per pubblicare annunci in merito a beni e servizi che potrebbero interessarvi quando visitate e utilizzate i Servizi online e altri siti web o servizi online. Per pubblicare tali annunci queste societ&agrave; potrebbero collocare o riconoscere uno speciale cookie sul vostro browser (incluso l'uso di pixel tag). Se volete saperne di pi&ugrave; su questa procedura e sulle vostre preferenze in merito visitate le pagine<span style="color: #800080;">&nbsp;<a href="http://www.networkadvertising.org/managing/opt_out.asp" style="color: #800080;"><strong>http://www.networkadvertising.org/managing/opt_out.asp</strong></a>&nbsp;e&nbsp;<a href="http://www.aboutads.info/" style="color: #800080;"><strong>http://www.aboutads.info/</strong></a></span>. Per annullare la procedura potete scaricare l'AppChoices su&nbsp;<span style="color: #800080;"><a href="http://www.aboutads.info/appchoices" style="color: #800080;"><strong>www.aboutads.info/appchoices.</strong></a></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>SICUREZZA</strong></span></p>
+<p>Ci impegniamo ad adottare tutte le opportune misure organizzative, tecniche e amministrative per proteggere i Dati personali. Purtroppo nessuna trasmissione di dati o sistema di archiviazione pu&ograve; garantire una sicurezza del 100%. Se ritenete che la vostra interazione con noi non sia pi&ugrave; sicura (ad esempio se vi sembra che la sicurezza del vostro account sia stata compromessa), vi preghiamo di avvertirci immediatamente nelle modalit&agrave; riportate nella sezione sottostante&nbsp;<em>&ldquo;Contatti&rdquo;</em>&nbsp;.</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>PREFERENZE, ACCESSO E MEMORIZZAZIONE</strong></span></p>
+<p>Potete esprimere le vostre preferenze sulla gestione dei vostri dati e desideriamo fornirvi tutte le informazioni necessarie affinch&eacute; facciate la scelta pi&ugrave; giusta per voi.</p>
+<p>Se non volete pi&ugrave; ricevere e-mail riguardanti le attivit&agrave; di marketing, potete annullare l'invio</p>
+<p>inviando una <strong>email a </strong><span style="color: #800080;"><a href="mailto:info@domuslibera.com" style="color: #800080;"><strong><u>info@domuslibera.com</u></strong></a></span></p>
+<p>Cercheremo di soddisfare le vostre richieste nel minor tempo possibile. Se scegliete di annullare l'invio, da parte nostra, di e-mail riguardanti le attivit&agrave; di marketing, potremo continuare a inviarvi messaggi amministrativi importanti, una funzione che non &egrave; possibile annullare.</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>COME CONSULTARE, MODIFICARE O ELIMINARE I DATI PERSONALI:</strong></span></p>
+<p>Se volete revisionare, correggere, aggiornare, omettere, restringere o eliminare i Dati personali precedentemente forniti o se volete ricevere una copia elettronica dei vostri Dati personali per trasmetterli a un'altra societ&agrave; (nei limiti previsti dalla legge sulla portabilit&agrave; dei dati), potete contattarci all'indirizzo <a href="mailto:info@domuslibera.com" style="color: #800080;"><strong><u>info@domuslibera.com</u></strong></a><strong><u>&nbsp;</u></strong>oppure tramite posta ordinaria:</p>
+<p>Domus Libera srl</p>
+<p>Vicolo del Piombo 7, 00186</p>
+<p>Roma, Italia</p>
+<p>Nella vostra richiesta specificate in modo chiaro quali Dati personali desiderate modificare, se desiderate eliminare i vostri Dati personali dal nostro database oppure qualsiasi altra limitazione che desiderate applicare al nostro utilizzo dei vostri Dati personali. Ai fini della vostra tutela, accettiamo solo le richieste relative ai Dati personali associati all'indirizzo e-mail da voi utilizzato per inviarci la richiesta; potrebbe essere necessario verificare la vostra identit&agrave; prima di soddisfare la richiesta. Cercheremo di soddisfare le vostre richieste nel minor tempo possibile.</p>
+<p>Si tenga presente che potrebbe essere necessario per noi conservare determinate informazioni a fini di archiviazione e/o per completare eventuali transazioni da voi avviate prima di richiedere una modifica o cancellazione (ad esempio quando effettuate un acquisto o una prenotazione, oppure partecipate a una promozione, potreste non essere in grado di modificare o cancellare i Dati personali forniti fino al completamento di tale acquisto, prenotazione o promozione). Potrebbero inoltre esservi informazioni residue che rimangono sui nostri database e che non saranno rimosse. Inoltre, potrebbero esservi informazioni che non vi consentiremo di revisionare per motivi legali, di sicurezza o altro.</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>CONSERVAZIONE</strong></span></p>
+<p>Conserveremo i vostri Dati personali per il periodo necessario a raggiungere gli scopi descritti nella presente Informativa sulla privacy, fatto salvo laddove un periodo di conservazione pi&ugrave; lungo sia richiesto o consentito per legge.</p>
+<p>I criteri utilizzati per stabilire i periodi di conservazione dei dati da parte nostra sono i seguenti:</p>
+<ul>
+<li>da quanto tempo abbiamo avviato la relazione con voi fornendovi i nostri Servizi (ad esempio, da quando utilizzate i nostri Servizi);</li>
+<li>se siamo soggetti a un obbligo legale (ad esempio, in base ad alcune leggi siamo tenuti ad archiviare le vostre transazioni per un determinato periodo di tempo prima di poterle cancellare);</li>
+<li>se &egrave; consigliabile conservare i dati tenuto conto della nostra posizione giuridica (ad esempio in caso di prescrizioni, controversie o indagini normative.</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>DATI SENSIBILI</strong></span></p>
+<p>Fatto salvo laddove specificamente richiesto, vi chiediamo di non inviarci n&eacute; di divulgare Dati personali sensibili tramite i Servizi o altro mezzo (ad esempio il numero di previdenza sociale, numeri identificativi nazionali, informazioni riguardanti l'etnia o la razza, le opinioni politiche, il credo religioso e le ideologie, la salute, i dati biometrici o le caratteristiche genetiche, la fedina penale, l'appartenenza a un sindacato, i procedimenti o le sanzioni amministrative o penali).</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>USO DEI SERVIZI DA PARTE DI MINORI</strong></span></p>
+<p>I Servizi non sono destinati ai minori di anni sedici (16), i quali non dovranno fornire Dati personali attraverso i Servizi.</p>
+<p>&nbsp;</p>
+<p><strong><span style="color: #800080;">AGGIORNAMENTI DELLA PRESENTE INFORMATIVA SULLA PRIVACY</span></strong></p>
+<p>&nbsp;La didascalia "ULTIMO AGGIORNAMENTO" nella parte superiore di questa pagina riporta la data dell'ultima revisione della presente Informativa sulla privacy. Le modifiche entreranno in vigore al momento della pubblicazione sui nostri Servizi online della versione aggiornata dell'Informativa sulla privacy. L'utilizzo dei Servizi in seguito a tali modifiche implica l'accettazione da parte vostra della versione aggiornata dell'Informativa sulla privacy. Se desiderate consultare la versione dell'Informativa sulla privacy prima della revisione contattateci all'indirizzo <a href="mailto:info@domuslibera.com" style="color: #800080;"><strong><u>info@domuslibera.com</u></strong></a>.</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>COME CONTATTARCI</strong></span></p>
+<p>Per qualsiasi domanda in merito alla presente Informativa sulla privacy vi preghiamo di contattarci all'indirizzo e-mail <a href="mailto:info@domuslibera.com" style="color: #800080;"><strong><u>info@domuslibera.com</u></strong></a>, oppure all'indirizzo postale:</p>
+<p>Domus Libera srl</p>
+<p>Vicolo del Piombo 7, 00186</p>
+<p>Roma, Italia</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>ALTRE INFORMAZIONI</strong></span></p>
+<p>Potete inoltre:</p>
+<ul>
+<li>contattare il nostro Responsabile regionale o nazionale per la protezione dei dati tramite <a href="mailto:info@domuslibera.com" style="color: #800080;"><strong><u>info@domuslibera.com</u></strong></a>. Nell'e-mail che ci invierete vi preghiamo di indicare il Paese dal quale ci state contattando</li>
+<li>Per presentare un reclamo nei confronti dell'autorit&agrave; responsabile della protezione dei dati nel vostro Paese, nella vostra regione o nel luogo in cui &egrave; stata commessa la presunta violazione della Legge sulla protezione dei dati applicabile, scrivete al seguente indirizzo<span style="color: #800080;"> <a href="http://ec.europa.eu/newsroom/article29/item-detail.cfm?item_id=612080." style="color: #800080;"><strong>http://ec.europa.eu/newsroom/article29/item-detail.cfm?item_id=612080.</strong></a></span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>PREFERENZE DI PRIVACY</strong></span></p>
+<p>Domus Libera srl rispetta la vostra privacy e mette a vostra disposizione informazioni e possibilit&agrave; di scelta. Le seguenti opzioni vi consentono di esprimere le vostre preferenze sui contenuti condivisi, la frequenza e la modalit&agrave; di invio dei messaggi da parte nostra.</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>Preferenze sui cookie</strong></span></p>
+<p>Vogliamo sapere cos'&egrave; importante per voi e garantirvi un'esperienza personalizzata. Come riportato pi&ugrave; dettagliatamente nella nostra informativa globale sulla privacy, sulle nostre pagine web utilizziamo strumenti digitali, quali tag e cookie. Questi ultimi ci aiutano anche a tutelare e migliorare i nostri servizi. Per modificare le vostre preferenze visitate la nostra pagina "preferenze di tracking".</p>
+<p>&nbsp;</p>
+<p><span style="color: #800080;"><strong>Altre preferenze</strong></span></p>
+<p>Se desiderate comunicarci altre preferenze o esercitare i vostri diritti individuali ai sensi del regolamento generale sulla protezione dei dati (gdpr) scriveteci all'indirizzo di posta elettronica <a href="mailto:info@domuslibera.com" style="color: #800080;"><strong><u>info@domuslibera.com</u></strong></a>oppure al seguente indirizzo di posta ordinaria:</p>
+<p>Domus Libera srl</p>
+<p>Vicolo del Piombo 7, 00186</p>
+<p>Roma, Italia</p>
+<p>Siamo impazienti di regalarvi un'esperienza che vada al di l&agrave; delle vostre aspettative, sia online che presso la nostra struttura. Per motivi di sicurezza potremmo richiedere la verifica della vostra identit&agrave; prima di procedere con la richiesta.</p></div>
+                
+                
+              
+              </div>
+
+            <!--   -->
+
+            </div>
+        </div>
+
+        
+          
+        
+
+
+        
+              
+
+</section>
+<footer>
+
+     <a href="https://www.travel365.it/migliori-beb-lazio.htm" target="_blank" class="logo_travel">
+           <img src="../templates/tetris/images/logo-travel.png" alt="">
+     </a>
+
+    <ul class="social">
+      <li>
+        <a target="_blank" href="https://www.facebook.com/domuslibera/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.instagram.com/explore/locations/598813481/domus-libera-hotel/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a target="_blank" href="https://plus.google.com/+Domuslibera"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+
+    <ul class="icone_action">
+      <li>
+        <a href="mailto:info@domuslibera.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a href="https://it/posizione-centrale-hotel-roma"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+
+    <address>
+      Vicolo del Piombo 7, Rome, Italy<br />
+      Tel. <a href="tel:+39 0689012699">+39 0689012699</a><br />
+      <a href="mailto:infodomuslibera@gmail.com" target="_blank">infodomuslibera@gmail.com</a><br /><br />
+      P.IVA 12871391004    </address>
+
+    <nav class="menu_footer"><ul><li ><a href="dati-societari.html">Dati societari</a></li><li class="active"><a href="privacy.html">Privacy</a></li><li ><a href="contatta-domus-libera.html">Contatti</a></li></ul></nav>
+
+</footer>
+
+
+
+<input type='hidden' id='analytics_model' value='interne'><script id='cookieScriptInclusion' type='text/javascript' defer src='https://bcm-public.blastness.com/init.js?v=1&l=ita'></script>
+
+</body>
+</html>
+<!-- 2022-10-31 23:12:15 -->
