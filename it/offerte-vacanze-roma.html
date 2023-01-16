@@ -1,0 +1,487 @@
+    <!DOCTYPE html>
+  <html>
+    <head>
+      
+    <title>Domus Libera - Offerte Soggiorno a Roma - Offerte </title>
+    <meta name="description" content="Scopri le offerte disponibili per te a Domus Libera, la tua casa vacanze nel centro di Roma: le migliori tariffe sono sul sito ufficiale! ">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Domus Libera - Offerte Soggiorno a Roma - Offerte ">
+    <meta property="og:description" content="Scopri le offerte disponibili per te a Domus Libera, la tua casa vacanze nel centro di Roma: le migliori tariffe sono sul sito ufficiale! ">
+    <meta property="og:url" content="https://www.domuslibera.com:443/it/offerte-vacanze-roma">
+    <meta property="og:site_name" content="Domus Libera">
+    <meta property="og:image" content="https://cdn.blastness.info/media/73/" >
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://www.domuslibera.com:443/it/offerte-vacanze-roma">
+    <meta name="twitter:creator" content="">
+   
+    <link rel="preconnect" href="https://cdn.blastness.info">
+    <link rel="dns-prefetch" href="https://cdn.blastness.info">
+            <style>
+        body{
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-smoothing: antialiased;
+        }
+    </style>
+    <link rel="alternate" href="../en/offers-guesthouse-rome.html" hreflang="en" />
+    <link rel="alternate" href="offerte-vacanze-roma.html" hreflang="it" />
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <meta name="format-detection" content="telephone=no">
+
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Domus Libera - Offerte Soggiorno a Roma - Offerte </title>
+      <meta name="description" content="Scopri le offerte disponibili per te a Domus Libera, la tua casa vacanze nel centro di Roma: le migliori tariffe sono sul sito ufficiale! "/>
+      <meta name="keywords" content=""/>
+
+
+      <link href="https://fonts.googleapis.com/css?family=Lora|Crimson+Text|Raleway|Work+Sans:400,700" rel="stylesheet">
+
+
+
+      <link rel="stylesheet" href="../templates/tetris/js/libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+      <link rel="stylesheet" href="../templates/tetris/js/libs/swipebox-master/src/css/swipebox.min.css">
+      <link rel="stylesheet" href="../templates/tetris/js/libs/Swiper-3.4.0/dist/css/swiper.min.css">
+      <link rel="stylesheet" href="../templates/tetris/css/style.css%3Fv=1.1.css">
+      <link rel="stylesheet" href="../templates/tetris/css/style-modify.css%3Fv=1.1.css">
+
+      <script type="text/javascript" src="../templates/tetris/js/libs/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+      <script type="text/javascript" src="../templates/tetris/js/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="../templates/tetris/js/libs/swipebox-master/src/js/jquery.swipebox.min.js"></script>
+      <script type="text/javascript" src="../templates/tetris/js/libs/Swiper-3.4.0/dist/js/swiper.jquery.min.js"></script>
+
+      <script type="text/javascript" src="../templates/tetris/js/libs/janpaepke-ScrollMagic-ae215ee/scrollmagic/minified/ScrollMagic.min.js"></script>
+      <script type="text/javascript" src="https://www.domuslibera.com/templates/tetris/js/isotope.pkgd.min.js"></script>
+      <script type="text/javascript" language="javascript" src="https://inclusioni.blastness.com/lingue_calendario/jquery.ui.datepicker-ita.js"></script>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+
+          $( window ).scroll(function() {
+
+            if($(window).scrollTop() >= 537){
+              $(".action_menu").addClass("sticky");
+            } else {
+              $(".action_menu").removeClass("sticky");
+            }
+
+          });
+
+
+          var gallery = new Swiper('.gallery', {
+              paginationClickable: true,
+              spaceBetween: 30,
+              loop: true,
+              autoplay: 3000,
+              	speed: 1000,
+              effect: 'fade',
+          		onInit: function(swiper){
+          			numero_slide = parseInt(swiper.slides.length)-2;
+          			if(numero_slide==1){
+          					swiper.stopAutoplay();
+          				}
+          		}
+          });
+
+          var offerte_slider = new Swiper('.offerte_slider', {
+              pagination: '.swiper-pagination',
+              slidesPerView: 2,
+              paginationClickable: true,
+              spaceBetween: 30,
+              nextButton: '.swiper-next',
+              prevButton: '.swiper-prev',
+              autoplay: 3000,
+          		speed: 1000,
+              loop: true,
+          		onInit: function(swiper){
+          			numero_slide = parseInt(swiper.slides.length)-2;
+          			if(numero_slide==1){
+          					swiper.stopAutoplay();
+          				}
+          		},
+              // Responsive breakpoints
+              breakpoints: {
+                1000: {
+                  slidesPerView: 1,
+                  spaceBetween: 30
+                }
+              }
+          });
+
+        /*scrolloff Gallery*/
+        $('#gmap').addClass('scrolloff');
+
+        $('#overlay').on("mouseup",function(){
+           $('#gmap').addClass('scrolloff');
+        });
+        $('#overlay').on("mousedown",function(){
+           $('#gmap').removeClass('scrolloff');
+        });
+
+        $("#gmap").mouseleave(function () {
+           $('#gmap').addClass('scrolloff');
+        });
+
+        $.datepicker.regional['ita'];
+
+          $( "#data_arrivo" ).datepicker({
+            dateFormat:"dd-mm-yy",
+            minDate: new Date(),
+            onSelect: function(dateText) {
+              var date = $("#data_arrivo").datepicker("getDate");
+
+              $(".qr li ul li:nth-child(1) .gg").html($.datepicker.formatDate("d", date));
+              $(".qr li ul li:nth-child(1) .mm").html($.datepicker.formatDate("M", date));
+
+              if($('#data_arrivo').datepicker('getDate') >= $('#data_partenza').datepicker('getDate')){
+
+                var nextDayDate = $('#data_arrivo').datepicker('getDate', '+1d');
+                nextDayDate.setDate(nextDayDate.getDate());
+
+                var nextDayDatep1 = $('#data_arrivo').datepicker('getDate', '+1d');
+                nextDayDatep1.setDate(nextDayDatep1.getDate() + 1);
+
+                $("#data_partenza").datepicker( "option", "minDate", nextDayDatep1);
+                $('#data_partenza').datepicker('setDate', nextDayDate);
+
+                var date_1 = $("#data_partenza").datepicker("getDate");
+                $(".qr li ul li:nth-child(2) .gg").html($.datepicker.formatDate("d", date_1));
+                $(".qr li ul li:nth-child(2) .mm").html($.datepicker.formatDate("M", date_1));
+
+              } else {
+
+                var nextDayDate = $('#data_arrivo').datepicker('getDate', '+1d');
+                nextDayDate.setDate(nextDayDate.getDate() + 1);
+                $("#data_partenza").datepicker( "option", "minDate", nextDayDate);
+
+              }
+
+
+              notti = calcola_notti();
+              $('#notti_1').val(notti);
+            }
+
+
+          }).datepicker( "setDate", "d" );
+
+
+
+          $( "#data_partenza" ).datepicker({
+            dateFormat:"dd-mm-yy",
+            minDate: new Date(),
+            onSelect: function(dateText) {
+              var date = $("#data_partenza").datepicker("getDate");
+              $(".qr li ul li:nth-child(2) .gg").html($.datepicker.formatDate("d", date));
+              $(".qr li ul li:nth-child(2) .mm").html($.datepicker.formatDate("M", date));
+
+              notti = calcola_notti();
+              $('#notti_1').val(notti);
+            }
+
+          }).datepicker( "setDate", "+1d" );
+
+
+          var date = $("#data_arrivo").datepicker("getDate");
+          var date_1 = $("#data_partenza").datepicker("getDate");
+          $(".qr li ul li:nth-child(1) .gg").html($.datepicker.formatDate("d", date));
+          $(".qr li ul li:nth-child(1) .mm").html($.datepicker.formatDate("M", date));
+          $(".qr li ul li:nth-child(2) .gg").html($.datepicker.formatDate("d", date_1));
+          $(".qr li ul li:nth-child(2) .mm").html($.datepicker.formatDate("M", date_1));
+
+
+          $("#gg").val($.datepicker.formatDate("dd", date));
+          $("#mm").val($.datepicker.formatDate("mm", date));
+          $("#aa").val($.datepicker.formatDate("yy", date));
+
+
+
+          $(".freccia_in_basso").click(function() {
+           $('html, body').animate({
+            scrollTop: ($(".scroll_to_top").offset().top)
+          }, 1500);
+          })
+
+
+          var elementi_da_animare = new Array(".box1_content", ".box_content_inner", ".offerte li", ".menu_secondario li");
+          var contatore_scroll_magic = 0;
+
+          var controller = new ScrollMagic.Controller();
+
+          for (var i = 0; i < elementi_da_animare.length; i++) {
+
+             if($(elementi_da_animare[i]).length>1){
+
+               $(elementi_da_animare[i]).each(function() {
+
+               $(this).addClass("ScrollMagicElement"+contatore_scroll_magic);
+               var scene = new ScrollMagic.Scene({
+                triggerElement:".ScrollMagicElement"+contatore_scroll_magic,
+                reverse: false
+               })
+               .setClassToggle(".ScrollMagicElement"+contatore_scroll_magic, 'opacity')
+               .addTo(controller);
+               contatore_scroll_magic++;
+               });
+
+             } else {
+
+              var scene = new ScrollMagic.Scene({
+               triggerElement:elementi_da_animare[i],
+               reverse: false
+              })
+              .setClassToggle(elementi_da_animare[i], 'opacity')
+              .addTo(controller);
+
+            }
+
+          }
+
+
+          $('#hamburger_menu').click(function(){
+
+      	  	$(this).toggleClass("open");
+      		  if ($("body").hasClass("apri_menu_mobile")) {
+      				$("body").removeClass("apri_menu_mobile").addClass("chiudi_menu_mobile");
+      		  } else {
+      				$("body").addClass("apri_menu_mobile").removeClass("chiudi_menu_mobile");
+      		  }
+
+          });
+
+
+          $( window ).resize(function() {
+            if($("#check_zindex").css("z-index") != "750"){
+                $("body").removeClass("apri_menu_mobile").removeClass("chiudi_menu_mobile");
+            }
+          });
+
+          $(".swipebox").swipebox();
+
+
+
+          var gallery = "";
+      		$('.gallery_minigallery li').each(function(){
+      			gallery += "<li class='"+$(this).attr("class")+"'>";
+      			gallery += $(this).html();
+      			gallery += "</li>";
+      		});
+
+      		casual = Math.floor((Math.random() * 100) + 1);
+      		$('.swipebox').addClass("img"+casual);
+      		$(".img"+casual).swipebox();
+
+      		$( ".filter" ).click(function() {
+      		  $(".filter").removeClass("active");
+      		  $(this).addClass("active");
+      		  var class_ = $(this).attr("data-filter");
+      		  casual = Math.floor((Math.random() * 100) + 1);
+      			  if(class_ == "all"){
+      				  $('.gallery_minigallery li').remove();
+      				  $(".gallery_minigallery").append(gallery);
+      			  } else {
+      				  $('.gallery_minigallery li').remove();
+      				  $(".gallery_minigallery").append(gallery);
+      				  $(".gallery_minigallery li").not("."+class_).remove();
+      			  }
+      			  $('.swipebox').addClass("img"+casual);
+      			  $(".img"+casual).swipebox();
+      			}
+      		);
+
+
+
+
+
+
+        });
+
+
+        function calcola_notti(){
+
+          var alternate_data_inizio = $('#data_arrivo').val();
+      		var alternate_data_fine = $('#data_partenza').val();
+
+      		alternate_data_inizio = alternate_data_inizio.split('-');
+      		var anno_i = alternate_data_inizio[2];
+      		var mese_i = alternate_data_inizio[1];
+      		var giorno_i = alternate_data_inizio[0];
+
+      		alternate_data_fine = alternate_data_fine.split('-');
+      		var anno_p = alternate_data_fine[2];
+      		var mese_p = alternate_data_fine[1];
+      		var giorno_p = alternate_data_fine[0];
+
+      		fromdate = new Date( anno_i, mese_i-1, giorno_i);
+      		todate = new Date( anno_p, mese_p-1, giorno_p);
+      		var giorni_differenza = (todate-fromdate)/86400000;
+      		giorni_differenza = Math.round(giorni_differenza);
+
+
+          var date = $("#data_arrivo").datepicker("getDate");
+          $("#gg").val($.datepicker.formatDate("dd", date));
+          $("#mm").val($.datepicker.formatDate("mm", date));
+          $("#aa").val($.datepicker.formatDate("yy", date));
+
+          return giorni_differenza;
+
+        }
+
+      </script>
+
+    </head>
+    <body>
+    <div id="check_zindex"></div>
+
+<div id="hamburger_menu">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- ELEMENTO QR -->
+<form id="form_qr" action="https://www.blastnessbooking.com/reservation_hotel.htm" method="get">
+
+<input type="hidden" id="lingua_int" name="lingua_int" value="ita" />
+<input type="hidden" id="id_stile" name="id_stile" value="12464" />
+<input type="hidden" id="id_albergo" name="id_albergo" value="13287" />
+<input type="hidden" id="dc" name="dc" value="7000" />
+
+<input type="hidden" id="tot_camere" name="tot_camere" value="1" />
+<input type="hidden" id="tot_adulti" name="tot_adulti" value="2" />
+<input type="hidden" id="tot_bambini" name="tot_bambini" value="0" />
+
+<input type="hidden" id="notti_1" name="notti_1" value="1" />
+<input type="hidden" id="gg" name="gg" value="" />
+<input type="hidden" id="mm" name="mm" value="" />
+<input type="hidden" id="aa" name="aa" value="" />
+
+<ul class="qr clearfix">
+  <li>Prenota subito</li>
+  <li>
+    <ul class="clearfix"><li>
+        <input type="text" id="data_arrivo" />
+        <div class="label">IN</div>
+        <div class="gg"></div>
+        <div class="mm"></div>
+      </li><li>
+        <input type="text" id="data_partenza" />
+        <div class="label">OUT</div>
+        <div class="gg"></div>
+        <div class="mm"></div>
+      </li></ul>
+  </li>
+  <li>
+    <input type="submit" value="Prenota"/>
+  </li>
+  <li>
+    <a href="https://www.blastnessbooking.com/reservation_cancel_modify.htm?lingua_int=ita&id_albergo=13287&dc=7000&id_stile=12464">Modifica/Cancella prenotazione</a>
+  </li>
+</ul>
+</form>
+
+<nav class="menu_principale"><ul><li ><a href="casa-vacanze-lusso-roma.html">Hotel</a></li><li ><a href="camere-lusso-roma.html">Camere</a><ul><li ><a href="camere-lusso-roma/classic-room.html">Camera Classic</a></li><li ><a href="camere-lusso-roma/superior-room.html">Camera Superior</a></li><li ><a href="camere-lusso-roma/superior-room-with-balcony.html">Camera Superior con balcone</a></li></ul></li><li ><a href="concierge-roma.html">Concierge</a></li><li ><a href="posizione-centrale-hotel-roma.html">Posizione</a></li><li ><a href="gallery-guest-house-roma.html">Gallery</a></li><li class="active"><a href="offerte-vacanze-roma.html">Offerte</a></li><li ><a href="https://www.blastnessbooking.com/reservation_hotel.htm?lingua_int=ita&id_albergo=13287&dc=7000&id_stile=12464&notti_1=1&tot_camere=1&tot_adulti=2&tot_bambini=0&gg=31&mm=10&aa=2022">Prenota ora</a></li></ul></nav>
+<ul class="action_menu">
+  <li><a href="tel:+39 0689012699"><i class="fa fa-phone" aria-hidden="true"></i><span>Chiama</span></a></li>
+  <li><a href="https://www.blastnessbooking.com/reservation_hotel.htm?lingua_int=ita&id_albergo=13287&dc=7000&id_stile=12464&notti_1=1&tot_camere=1&tot_adulti=2&tot_bambini=0&gg=31&mm=10&aa=2022"><i class="fa fa-calendar" aria-hidden="true"></i><span>Prenota</span></a></li>
+  <li><a href="mailto:infodomuslibera@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>mail</span></a></li>
+</ul>
+
+
+<header>
+
+  <nav class="menu_lingue"><ul><li ><a href="../en/offers-guesthouse-rome.html">en</a></li><li class="active"><a href="offerte-vacanze-roma.html">it</a></li></ul></nav>
+  <a href="index.html" class="logo"><!--<img src="/templates/tetris/images/logo.png" alt="">-->
+    <object width="auto" height="100%" type="image/svg+xml" data="../templates/tetris/images/logo.svg">
+    Your browser does not support SVG
+  </object>
+  </a>
+
+</header>
+
+
+<section>
+
+  
+
+
+
+
+
+
+
+
+        
+        <div class="box1 scroll_to_top  box1_offers box_no_mt">
+
+            
+            <div class="box1_content box1_content_offers">
+
+              <div class="box1_content_inner box1_content_inner_offers box1_content_inner_w100">
+                <h1>Offerte</h1>
+
+                
+                
+              
+              </div>
+
+            <!--   -->
+
+            </div>
+        </div>
+
+        
+                  
+        
+
+
+        
+        
+
+</section>
+<footer>
+
+     <a href="https://www.travel365.it/migliori-beb-lazio.htm" target="_blank" class="logo_travel">
+           <img src="../templates/tetris/images/logo-travel.png" alt="">
+     </a>
+
+    <ul class="social">
+      <li>
+        <a target="_blank" href="https://www.facebook.com/domuslibera/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.instagram.com/explore/locations/598813481/domus-libera-hotel/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a target="_blank" href="https://plus.google.com/+Domuslibera"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+
+    <ul class="icone_action">
+      <li>
+        <a href="mailto:info@domuslibera.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a href="https://it/posizione-centrale-hotel-roma"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+
+    <address>
+      Vicolo del Piombo 7, Rome, Italy<br />
+      Tel. <a href="tel:+39 0689012699">+39 0689012699</a><br />
+      <a href="mailto:infodomuslibera@gmail.com" target="_blank">infodomuslibera@gmail.com</a><br /><br />
+      P.IVA 12871391004    </address>
+
+    <nav class="menu_footer"><ul><li ><a href="dati-societari.html">Dati societari</a></li><li ><a href="privacy.html">Privacy</a></li><li ><a href="contatta-domus-libera.html">Contatti</a></li></ul></nav>
+
+</footer>
+
+
+
+<input type='hidden' id='analytics_model' value='offerte'><script id='cookieScriptInclusion' type='text/javascript' defer src='https://bcm-public.blastness.com/init.js?v=1&l=ita'></script>
+
+</body>
+</html>
+<!-- 2022-10-31 23:13:30 -->
