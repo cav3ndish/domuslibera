@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "templates/tetris/css"
+		},
+		{
+			"path": "templates/tetris/images"
+		},
+		{
+			"path": "templates/tetris/js"
+		},
+		{
+			"path": "en"
+		},
+		{
+			"path": "it"
+		}
+	]
+}
